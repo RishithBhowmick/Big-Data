@@ -3,18 +3,19 @@
 import sys
 import json
 import datetime
+import re
 
 
-def first_task(record):
+def first_task(record,word):
 
   is_recognised = record['recognized']
-  if is_recognised is True and record["word"]=="airplane":
+  if is_recognised is True and record["word"]==word:
     print("%s\t%d"%("Recognized",1))   
 
   elif is_recognised is False:
     time=datetime.date(int(record['timestamp'].split(' ')[0].split('-')[0]),int(record['timestamp'].split(' ')[0].split('-')[1]),int(record['timestamp'].split(' ')[0].split('-')[2])).weekday()
-    if time in range(5,7) and record["word"]=="airplane":
-        print("%s\t%d"%("Not Recognized",1))   
+    if time in range(5,7) and record["word"]==word:
+        print("%s\t%d"%("UnRecognized",1))   
     
 
 
@@ -42,11 +43,30 @@ def is_clean(record):
   input: dict
   returns: bool
   '''
+  
+  if not all(x.isalpha() or x.isspace() for x in record['word']):
+    return False
+  elif len(record['countrycode'])!=2 and record['countrycode'].isupper() or not record['countrycode'].isalpha():
+    return False
+  elif not (record['recognized']==True or record['recognized']==False or record['recognized']=="true" or record['recognized']=="false"):
+    return False
+  elif len(record['key_id'])!=16:
+    return False
+  elif not all(len(x)==2 for x in record['drawing']):
+    return False
+  else:
+    return True
+
 
   # to do
 
 for line in sys.stdin:
+  # print(sys.argv[0],,sys.argv[2])
   record = json.loads(line)
-  second_task(record,"aircraft carrier",100)
+  record_is_clean = is_clean(record)
+  if record_is_clean:
+    first_task(record,sys.argv[1])
+  else:
+    pass  
 
 

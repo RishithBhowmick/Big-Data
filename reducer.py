@@ -2,18 +2,16 @@
 from operator import itemgetter
 import sys
 
-current_word = None
+previous_word = word = None
 current_count = 0
-word = None
 
 # input comes from STDIN
 for line in sys.stdin:
     # remove leading and trailing whitespace
     line = line.strip()
-
     # parse the input we got from mapper.py
     word, count = line.split('\t', 1)
-
+    # print(word,count)
     # convert count (currently a string) to int
     try:
         count = int(count)
@@ -24,15 +22,15 @@ for line in sys.stdin:
 
     # this IF-switch only works because Hadoop sorts map output
     # by key (here: word) before it is passed to the reducer
-    if current_word == word:
+    if previous_word == word:
         current_count += count
     else:
-        if current_word:
+        if previous_word:
             # write result to STDOUT
-            print('%s\t%s' % (current_word, current_count))
+            print(current_count)
         current_count = count
-        current_word = word
+        previous_word = word   
 
 # do not forget to output the last word if needed!
-if current_word == word:
-    print ('%s\t%s' % (current_word, current_count))
+if previous_word == word:
+    print (current_count)
