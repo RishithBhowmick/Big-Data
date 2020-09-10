@@ -11,27 +11,22 @@ for line in sys.stdin:
     line = line.strip()
     
     word, count = line.split('\t', 1)
-    
+    # print(word)
     try:
         count = int(count)
     except ValueError:
         continue
 
     try:
-        if previous_word == word:
-            current_count += count
+        if word not in all_keys.keys():
+            all_keys[word]=1
         else:
-            if previous_word:
-                # write result to STDOUT
-                print(current_count)
-            current_count = count
-            previous_word = word
+            all_keys[word]+=1
     except Exception as e:
-        continue           
+        continue        
 
-# do not forget to output the last word if needed!
 try:
-    if previous_word == word:
-
-except Exception as e:
+    for i in sorted(all_keys.items(),key=lambda x:x[0]):
+        print(i[1])
+except Exception as e:  
     pass

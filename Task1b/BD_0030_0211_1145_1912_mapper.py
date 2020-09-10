@@ -1,25 +1,19 @@
 #!/usr/bin/python3
-# import numpy as np
 import sys
 import json
 import datetime
 import re
+ 
 
+def euclidean_dist(x,y):
+    return (x**2+y**2)**0.5
 
-def first_task(record,word):
-
-  is_recognised = record['recognized']
-  if is_recognised is True and record["word"]==word:
-    print("%s\t%d"%("Recognized",1))   
-
-  elif is_recognised is False:
-    time=datetime.date(int(record['timestamp'].split(' ')[0].split('-')[0]),int(record['timestamp'].split(' ')[0].split('-')[1]),int(record['timestamp'].split(' ')[0].split('-')[2])).weekday()
-    if time in range(5,7) and record["word"]==word:
-        print("%s\t%d"%("UnRecognized",1))   
-    
-
-
-
+def second_task(record,target_word,dist):
+    l=euclidean_dist(record["drawing"][0][0][0],record["drawing"][0][1][0])
+    if record["word"]==target_word and l>dist:
+        print("%s\t%s"%(record['countrycode'],1))
+    else:
+      pass
 def is_clean(record):
   '''
   checks whether the record is clean or not
@@ -53,8 +47,7 @@ def is_clean(record):
         for k in j:
           if not all(isinstance(item, int) for item in k):
               return False
-          return True    
-    
+    return True
 
 
   # to do
@@ -64,7 +57,7 @@ for line in sys.stdin:
   record = json.loads(line)
   record_is_clean = is_clean(record)
   if record_is_clean:
-    first_task(record,sys.argv[1])
+    second_task(record,sys.argv[1],int(sys.argv[2]))
   else:
     pass  
 

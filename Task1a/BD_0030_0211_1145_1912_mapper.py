@@ -17,9 +17,6 @@ def first_task(record,word):
     if time in range(5,7) and record["word"]==word:
         print("%s\t%d"%("UnRecognized",1))   
     
-
-
-
 def is_clean(record):
   '''
   checks whether the record is clean or not
@@ -53,8 +50,7 @@ def is_clean(record):
         for k in j:
           if not all(isinstance(item, int) for item in k):
               return False
-          return True    
-    
+    return True
 
 
   # to do
