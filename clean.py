@@ -9,14 +9,5 @@ for i in data:
     data.remove(i)
   elif not all(len(x)==2 for x in i['drawing']) or i['drawing']==[]:
     data.remove(i)
-  elif all(len(x)==2 for x in i['drawing']):
-    for j in i['drawing']:
-      lis=[len(x) for x in j]
-      if len(list(set(lis)))!=1:
-        data.remove(i)
-      else:
-        for k in j:
-          if not all(isinstance(item, int) for item in k):
-            data.remove(i)
   else:
     first_task(i)
