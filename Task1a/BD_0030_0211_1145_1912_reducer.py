@@ -1,13 +1,12 @@
 #!/usr/bin/python3
 import sys
 
-# input comes from STDIN
+
 all_keys = dict()
 for line in sys.stdin:
     line = line.strip()
     
     word, count = line.split('\t', 1)
-    # print(word)
     try:
         count = int(count)
     except ValueError:
