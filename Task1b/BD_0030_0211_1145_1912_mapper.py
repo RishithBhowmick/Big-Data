@@ -28,10 +28,6 @@ def is_clean(record):
     lis=[len(j[0])==len(j[1]) for j in record['drawing']]
     if list(set(lis))!=[True]:
       return False
-    else:
-      lis1=[all(isinstance(k[0], int) for j in record['drawing'] for k in j)==1 and all(isinstance(k[1], int) for j in record['drawing'] for k in j)==1]
-      if lis1==[False]:
-        return False
     return True   
   except Exception as e:
     return False

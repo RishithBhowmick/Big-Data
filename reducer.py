@@ -32,6 +32,6 @@ for line in sys.stdin:
 # do not forget to output the last word if needed!
 try:
     if previous_word == word:
-
+        print("%s\t%s")
 except Exception as e:
     pass

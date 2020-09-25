@@ -60,7 +60,6 @@ def is_clean(record):
   # to do
 
 for line in sys.stdin:
-  # print(sys.argv[0],,sys.argv[2])
   record = json.loads(line)
   record_is_clean = is_clean(record)
   if record_is_clean:
