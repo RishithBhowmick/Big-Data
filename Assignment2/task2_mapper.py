@@ -9,8 +9,8 @@ for line in sys.stdin:
         pagerank = f.readline()
         to_nodes = line.split(" ")[1]
         num_nodes = len(to_nodes)
-        node_contribution = int(pagerank)/num_nodes
+        node_contribution = float(pagerank)/num_nodes
         for node in to_nodes.split(","):
-            print("%s\t%f",node,node_contribution)
+            print(f"{node}\t{node_contribution}")
     except Exception as e:
         print("Task2 mapper error: ",e)
