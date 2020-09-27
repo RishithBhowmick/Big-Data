@@ -18,5 +18,5 @@ f=open("v.txt","w")
 for key in sorted(nodes.keys()):
   print(key,sep=" ",end=" ")
   print(*nodes[key],sep=",")
-  f.write("1\n")
+  f.write(f"{key},1\n")
 f.close()  
