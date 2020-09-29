@@ -17,5 +17,7 @@ for line in sys.stdin:
     continue
 g = open("v1.txt","w")
 for key in sorted(page_rank_contribution.keys()):
-    g.write(str(functools.reduce(lambda x,y:x+y,page_rank_contribution[key])))
+    pagerank = functools.reduce(lambda x,y:x+y,page_rank_contribution[key]) 
+    pagerank = 0.15+(0.85*pagerank)
+    g.write(f"{key},{pagerank}\n")
 g.close()  
