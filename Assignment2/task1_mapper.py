@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import sys
 
 
@@ -7,9 +8,6 @@ for line in sys.stdin:
           continue
       else:
           ele = line.split("\t")
-          # nodes = line.strip("\n")
-          # to = nodes.split('\t')
-          # from_node = to[0]
           from_node = ele[0]
           if(len(ele)!= 1):
             to_node = ele[1].strip("\r\n")

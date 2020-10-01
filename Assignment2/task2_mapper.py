@@ -22,7 +22,6 @@ for line in sys.stdin:
         node_contribution = page_rank_dict[node1]/num_nodes
 
         for node in to_nodes:
-            # print("Node is:",node,".")
             print(f"{node}\t{node_contribution}")
     except Exception as e:
         continue
