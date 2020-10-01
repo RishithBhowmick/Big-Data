@@ -2,7 +2,7 @@ import sys
 
 #insert full path to v here
 page_rank_dict = dict()
-f = open("v.txt","r")
+f = open(sys.argv[1],"r")
 for i in f.readlines():
     ele = i.split(",")
     node = ele[0]
@@ -21,11 +21,8 @@ for line in sys.stdin:
 
         node_contribution = page_rank_dict[node1]/num_nodes
 
-        # except Exception as e:
-        #     print("Error retriving pagerank from dict: ","node: ",node, "line: ",line)        
-        #     continue
         for node in to_nodes:
             # print("Node is:",node,".")
             print(f"{node}\t{node_contribution}")
     except Exception as e:
-        print("Task2 mapper error: ",e," at line: ",line)
+        continue

@@ -13,11 +13,9 @@ for line in sys.stdin:
     else:
       page_rank_contribution[node]+=contrib
   except Exception as e:
-    # print("Task 2",line)
     continue
-g = open("v1.txt","w")
+
 for key in sorted(page_rank_contribution.keys()):
     pagerank = functools.reduce(lambda x,y:x+y,page_rank_contribution[key]) 
     pagerank = 0.15+(0.85*pagerank)
-    g.write(f"{key},{pagerank}\n")
-g.close()  
+    print(key,pagerank) 

@@ -13,7 +13,7 @@ for line in sys.stdin:
   except Exception as e:
     # print("Task 2",line)
     continue
-f=open("v.txt","w")
+f=open(sys.argv[1],"w")
 for key in sorted(nodes.keys()):
   print(key,sep=" ",end=" ")
   print(*nodes[key],sep=",")
