@@ -24,6 +24,9 @@ for line in sys.stdin:
         #nodes with only outgoing nodes
         print(f"{node1}\t0") 
         for node in to_nodes:
-            print(f"{node}\t{node_contribution}")
+            if node=='':
+                pass
+            else:
+                print(f"{node}\t{node_contribution}")
     except Exception as e:
         continue
