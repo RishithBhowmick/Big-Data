@@ -18,5 +18,4 @@ for line in sys.stdin:
 for key in sorted(page_rank_contribution.keys()):
     pagerank = functools.reduce(lambda x,y:x+y,page_rank_contribution[key]) 
     pagerank = 0.15000+(0.85000*pagerank)
-    # print(f"{key},{round(pagerank,5)}") 
-    print("%s,%.5f"%(key,pagerank)) 
+    print("%s,%.5f"%(key,round(pagerank,5))) 

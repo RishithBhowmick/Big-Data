@@ -24,11 +24,8 @@ for line in sys.stdin:
         #to handle node for contribution to itself
         print(f"{node1}\t0") 
         for node in to_nodes:
-            
+                        
             #to handle the case if a node has no pagerank i.e. no outgoing links
-            if node=='':
-                pass
-            else:
                 if node in page_rank_dict.keys():
                     print(f"{node}\t{node_contribution}")
     except Exception as e:

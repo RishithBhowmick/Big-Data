@@ -10,8 +10,6 @@ for line in sys.stdin:
 
      # collect the existing keys
     keys = nodes.keys()
-    if from_node=="12078":
-      print(line)
     if from_node not in keys:
       nodes[from_node] = list()
       nodes[from_node].append(to_node)
@@ -24,10 +22,7 @@ for line in sys.stdin:
 
 f=open(sys.argv[1],"w")
 for key in sorted(nodes.keys()):
-  
   print(key,sep=" ",end=" ")
-  # print(key,sep=" ",end="\t")
   print(*sorted(nodes[key]),sep=",")
-  # print(sorted(nodes[key]))
   f.write(f"{key},1\n") 
 # writing ALL the existing nodes and initialising their page rank to 1
