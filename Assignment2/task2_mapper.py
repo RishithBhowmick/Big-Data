@@ -19,9 +19,10 @@ for line in sys.stdin:
         to_nodes = ele[1].strip("\n")
         to_nodes = to_nodes.split(",")
         num_nodes = len(to_nodes)    
-
         node_contribution = page_rank_dict[node1]/num_nodes
-
+        
+        #nodes with only outgoing nodes
+        print(f"{node1}\t0") 
         for node in to_nodes:
             print(f"{node}\t{node_contribution}")
     except Exception as e:
