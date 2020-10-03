@@ -10,27 +10,24 @@ for line in sys.stdin:
 
      # collect the existing keys
     keys = nodes.keys()
-
+    if from_node=="12078":
+      print(line)
     if from_node not in keys:
       nodes[from_node] = list()
       nodes[from_node].append(to_node)
     else:
       nodes[from_node].append(to_node)
     
-    #to capture nodes that have only incoming nodes
-    #I think this is the problem which doesnt need to be handled as that node wont be there in the dataset
-    # as in, eg 0 haso only incoming links, it will appear only on the RHS of the dataset
-    if to_node not in keys:
-      nodes[to_node] = list()
-
+    
   except Exception as e:
     continue
 
 f=open(sys.argv[1],"w")
 for key in sorted(nodes.keys()):
-  l=sorted(nodes[key])
-  if len(l)!=0:
-    print(key,sep=" ",end=" ")
-    print(*l,sep=",")
+  
+  print(key,sep=" ",end=" ")
+  # print(key,sep=" ",end="\t")
+  print(*sorted(nodes[key]),sep=",")
+  # print(sorted(nodes[key]))
   f.write(f"{key},1\n") 
 # writing ALL the existing nodes and initialising their page rank to 1
