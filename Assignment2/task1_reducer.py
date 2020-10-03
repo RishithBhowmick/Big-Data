@@ -34,4 +34,3 @@ for key in sorted(nodes.keys()):
     print(*l,sep=",")
   f.write(f"{key},1\n") 
 # writing ALL the existing nodes and initialising their page rank to 1
-
