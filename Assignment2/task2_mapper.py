@@ -26,7 +26,10 @@ for line in sys.stdin:
         for node in to_nodes:
             
             #to handle the case if a node has no pagerank i.e. no outgoing links
-            if node in page_rank_dict.keys():
-                print(f"{node}\t{node_contribution}")
+            if node=='':
+                pass
+            else:
+                if node in page_rank_dict.keys():
+                    print(f"{node}\t{node_contribution}")
     except Exception as e:
         continue
