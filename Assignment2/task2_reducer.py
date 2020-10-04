@@ -15,5 +15,5 @@ for line in sys.stdin:
 
 for key in sorted(page_rank_contribution.keys()):
     pagerank = page_rank_contribution[key]
-    pagerank = 0.15+(0.85*round(pagerank,5))
+    pagerank = 0.15+(0.85*pagerank)
     print("%s,%.5f"%(key,pagerank)) 

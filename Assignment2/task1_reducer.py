@@ -22,7 +22,7 @@ for line in sys.stdin:
 
 f=open(sys.argv[1],"w")
 for key in sorted(nodes.keys()):
-  print(key,end=" ")
+  print(key,end="\t")
   print(*sorted(nodes[key]),sep=",")
   f.write(f"{key},1\n") 
 # writing ALL the existing nodes and initialising their page rank to 1

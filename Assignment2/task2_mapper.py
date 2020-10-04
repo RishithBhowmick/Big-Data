@@ -13,12 +13,12 @@ for i in f.readlines():
 
 for line in sys.stdin:
     try:
-        ele = line.split(" ")
+        ele = line.split("\t")
         node1 = ele[0]
         to_nodes = ele[1].strip("\n")
         to_nodes = to_nodes.split(",")
         num_nodes = len(to_nodes)    
-        node_contribution = float(page_rank_dict[node1]/num_nodes)
+        node_contribution = page_rank_dict[node1]/num_nodes
         
         #to handle node for contribution to itself
         print(f"{node1}\t0") #this didnt add
