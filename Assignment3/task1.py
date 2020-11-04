@@ -1,16 +1,28 @@
 import pyspark
+import sys
 spark = pyspark.SparkContext()
 spark_session = pyspark.sql.SparkSession(spark)
 from pyspark.sql import functions as F
-df = spark_session.read.csv("hdfs://localhost:9000/shape_stat.csv",inferSchema=True,header=True)
+print("Arguments length .......: ",len(sys.argv))
+if len(sys.argv)==4:
 
-word_df = df[df['word']=="alarm clock"]
-#word_df.show()
-avg_recognised_count = word_df.groupBy(word_df.recognized).agg(F.avg(word_df.Total_Strokes)).collect()
+	df = spark_session.read.csv(sys.argv[3],inferSchema=True,header=True)
 
-print("##################.///////////")
-print(round(avg_recognised_count[0]["avg(Total_Strokes)"],5))
-print(round(avg_recognised_count[1]["avg(Total_Strokes)"],5))
+	word_df = df[df['word']==sys.argv[1]]
+	#word_df.show()
+	avg_recognised_count = word_df.groupBy(word_df.recognized).agg(F.avg(word_df.Total_Strokes)).collect()
+
+	
+	if not avg_recognised_count:
+		print(0.00000)
+		print(0.00000)
+	#print(avg_recognised_count)
+	else:
+		print(round(avg_recognised_count[0]["avg(Total_Strokes)"],5))
+		print(round(avg_recognised_count[1]["avg(Total_Strokes)"],5))
+else:
+	pass
+
 #print("Average recognised is:",round(avg_recognised_count[0][1]))
 #print("Average recognised is:",round(avg_recognised_count[1][1]))
 
