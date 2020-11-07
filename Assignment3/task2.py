@@ -1,8 +1,9 @@
-import findspark
+# import findspark
 import pyspark
 import sys
-findspark.init()
+# findspark.init()
 from pyspark.sql import SparkSession
+from pyspark.sql.functions import col
 if len(sys.argv)==5:
 
     spark = SparkSession.builder.master("local[*]").getOrCreate()
@@ -12,12 +13,17 @@ if len(sys.argv)==5:
     shape_stat = shape_stat.alias('shape_stat')
     s=shape.join(shape_stat, shape.key_id == shape_stat.key_id).select(shape["*"],shape_stat["timestamp"],shape_stat['recognized'],shape_stat['Total_Strokes'])
     k = 8
-    valoutput = s.filter((s.recognized=='False') & (s.Total_Strokes<sys.argv[2]) & (s.word == sys.argv[1])).groupBy('countrycode').count().show()
-    if not valoutput:
+    valoutput = s.filter((s.recognized=='False') & (s.Total_Strokes<int(sys.argv[2])) & (s.word == sys.argv[1]))
+    # print("#########")
+    # print(type(valoutput))
+    if not bool(valoutput.head(1)):
         print(0)
     else:
-        for i in valoutput.rdd.collect():
-            print(i['countrycode']+','+str(i['count']))
+        # print(valoutput)
+        # print(type(valoutput))
+        for i in valoutput.groupBy('countrycode').count().sort(col('countrycode')).collect():
+            if i['count']>0:
+                print(i['countrycode']+','+str(i['count']))
 else:
     pass        
 
