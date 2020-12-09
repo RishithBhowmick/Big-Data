@@ -266,10 +266,6 @@ def main():
                           args=(task_execution_pool, worker_slots, algo, task_queue, jobs, lock))
     t4 = threading.Thread(target=send_task,
                           args=(worker_slots, algo, task_execution_pool, task_queue, lock))
-    t4 = threading.Thread(target=send_task,
-                          args=(worker_slots, algo, task_execution_pool, task_queue, lock))
-    # t5 = threading.Thread(target=show_slots,
-    #                       args=(task_execution_pool, worker_slots, algo, lock))
     os.system("rm worker-log*")
     os.system("rm Master-log*")
     t1.start()
