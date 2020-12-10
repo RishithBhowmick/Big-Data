@@ -1,0 +1,110 @@
+Received Job 0 at 19:06:07.207994 LL
+sending task 0_M0 to 1 at 19:06:07.391955 algo LL
+sending task 0_M1 to 1 at 19:06:07.399955 algo LL
+sending task 0_M2 to 2 at 19:06:07.403957 algo LL
+sending task 0_M3 to 1 at 19:06:07.415956 algo LL
+sending task 0_M4 to 2 at 19:06:07.423954 algo LL
+sending task 0_R0 to 3 at 19:06:07.435956 algo LL
+sending task 0_R1 to 1 at 19:06:07.455956 algo LL
+sending task 0_R2 to 2 at 19:06:07.467955 algo LL
+sending task 0_R3 to 3 at 19:06:07.483954 algo LL
+sending task 0_R4 to 1 at 19:06:07.503958 algo LL
+Received task 0_M2 at 19:06:11.449289
+Received task 0_M0 at 19:06:11.885125
+Received task 0_M3 at 19:06:11.900538
+Received task 0_R4 at 19:06:11.908459
+Received task 0_R0 at 19:06:12.089396
+Received Job 1 at 19:06:12.206611 LL
+Received task 0_R2 at 19:06:12.459447
+sending task 1_M0 to 1 at 19:06:12.543575 algo LL
+sending task 1_M1 to 2 at 19:06:12.560112 algo LL
+sending task 1_M2 to 1 at 19:06:12.579208 algo LL
+sending task 1_M3 to 2 at 19:06:12.611208 algo LL
+sending task 1_M4 to 1 at 19:06:12.628036 algo LL
+sending task 1_R0 to 2 at 19:06:12.660086 algo LL
+sending task 1_R1 to 3 at 19:06:12.686743 algo LL
+sending task 1_R2 to 1 at 19:06:12.702789 algo LL
+sending task 1_R3 to 2 at 19:06:12.723206 algo LL
+sending task 1_R4 to 3 at 19:06:12.755251 algo LL
+Received task 0_M1 at 19:06:12.926184
+Received task 0_R3 at 19:06:13.102364
+Received task 0_M4 at 19:06:13.473798
+Completed Job 0 at 19:06:13.951824 LL
+Received task 0_R1 at 19:06:13.951824
+Received task 1_M2 at 19:06:16.980734
+Received task 1_R2 at 19:06:17.004390
+Received task 1_R4 at 19:06:17.141104
+Received Job 2 at 19:06:17.211902 LL
+Received task 1_M3 at 19:06:17.499570
+Received task 1_R3 at 19:06:17.518308
+sending task 2_M0 to 1 at 19:06:17.805110 algo LL
+sending task 2_M1 to 1 at 19:06:17.816051 algo LL
+sending task 2_M2 to 2 at 19:06:17.824060 algo LL
+sending task 2_M3 to 1 at 19:06:17.836056 algo LL
+sending task 2_M4 to 2 at 19:06:17.856054 algo LL
+sending task 2_R0 to 3 at 19:06:17.879552 algo LL
+sending task 2_R1 to 1 at 19:06:17.897271 algo LL
+sending task 2_R2 to 2 at 19:06:17.911533 algo LL
+sending task 2_R3 to 3 at 19:06:17.923541 algo LL
+sending task 2_R4 to 1 at 19:06:17.935531 algo LL
+Received task 1_M0 at 19:06:18.009220
+Received task 1_R1 at 19:06:18.150557
+Received task 1_M1 at 19:06:18.515495
+Received task 1_M4 at 19:06:19.027757
+Completed Job 1 at 19:06:19.532506 LL
+Received task 1_R0 at 19:06:19.532506
+Received task 2_M1 at 19:06:22.054378
+Received task 2_R1 at 19:06:22.070453
+Received task 2_R3 at 19:06:22.177681
+Received Job 3 at 19:06:22.223751 LL
+Received task 2_M4 at 19:06:22.575535
+sending task 3_M0 to 1 at 19:06:22.986922 algo LL
+sending task 3_M1 to 1 at 19:06:23.005782 algo LL
+sending task 3_M2 to 2 at 19:06:23.022934 algo LL
+sending task 3_M3 to 1 at 19:06:23.040659 algo LL
+sending task 3_M4 to 2 at 19:06:23.056418 algo LL
+sending task 3_R0 to 3 at 19:06:23.070994 algo LL
+sending task 3_R1 to 1 at 19:06:23.091648 algo LL
+Received task 2_M0 at 19:06:23.087642
+Received task 2_R4 at 19:06:23.120784
+sending task 3_R2 to 1 at 19:06:23.132485 algo LL
+sending task 3_R3 to 1 at 19:06:23.151266 algo LL
+sending task 3_R4 to 1 at 19:06:23.155283 algo LL
+Received task 2_R0 at 19:06:23.191781
+Received task 2_M2 at 19:06:23.590723
+Received task 2_M3 at 19:06:24.111029
+Completed Job 2 at 19:06:24.610820 LL
+Received task 2_R2 at 19:06:24.610820
+Received task 3_M1 at 19:06:27.150652
+Received Job 4 at 19:06:27.251845 LL
+Received task 3_M4 at 19:06:27.634553
+Received task 3_M3 at 19:06:28.171756
+Received task 3_R2 at 19:06:28.187256
+sending task 4_M0 to 1 at 19:06:28.196983 algo LL
+Received task 3_R4 at 19:06:28.200983
+sending task 4_M1 to 1 at 19:06:28.207832 algo LL
+sending task 4_M2 to 1 at 19:06:28.221083 algo LL
+sending task 4_M3 to 1 at 19:06:28.234842 algo LL
+Received task 3_R0 at 19:06:28.241727
+sending task 4_M4 to 1 at 19:06:28.249714 algo LL
+sending task 4_R0 to 2 at 19:06:28.253721 algo LL
+sending task 4_R1 to 3 at 19:06:28.280785 algo LL
+sending task 4_R2 to 1 at 19:06:28.295760 algo LL
+sending task 4_R3 to 1 at 19:06:28.314099 algo LL
+sending task 4_R4 to 2 at 19:06:28.325945 algo LL
+Received task 3_M2 at 19:06:28.648677
+Received task 3_M0 at 19:06:29.209047
+Received task 3_R3 at 19:06:29.226033
+Completed Job 3 at 19:06:30.239246 LL
+Received task 3_R1 at 19:06:30.239246
+Received task 4_R4 at 19:06:32.670573
+Received task 4_M1 at 19:06:33.275065
+Received task 4_M3 at 19:06:33.302359
+Received task 4_R2 at 19:06:33.341346
+Received task 4_R0 at 19:06:33.684624
+Received task 4_R1 at 19:06:33.825222
+Received task 4_M2 at 19:06:34.327627
+Received task 4_R3 at 19:06:34.355627
+Received task 4_M0 at 19:06:35.356785
+Completed Job 4 at 19:06:36.394754 LL
+Received task 4_M4 at 19:06:36.394754

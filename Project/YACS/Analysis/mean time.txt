@@ -1,0 +1,15 @@
+Median time taken by tasks in Random is :     5.234755
+Median time taken by jobs in Random is :     8.333962
+Average time taken by jobs in Random is :   7.942582999999999
+Average time taken by tasks in Random is :   5.321180559999999
+
+
+Median time taken by tasks in Round Robin is :     5.436582
+Median time taken by jobs in Round Robin is :     7.843225
+Average time taken by jobs in Round Robin is :   7.8899924
+Average time taken by tasks in Round Robin is :   5.560430899999999
+
+Median time taken by tasks in Least Loaded is :     5.185253
+Median time taken by jobs in Least Loaded is :     8.015495
+Average time taken by jobs in Least Loaded is :   7.725409400000001
+Average time taken by tasks in Least Loaded is :   5.35494238
