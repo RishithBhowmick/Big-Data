@@ -7,7 +7,7 @@
 
 ### Instructions to run
 
-1. Clone the repository by using either
+1. Clone the repository
 ```bash
 git clone https://github.com/RishithBhowmick/Big-Data.git
 # or
